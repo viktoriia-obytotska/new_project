@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+</head>
+<body>
+
+<?php if(isset ($login) && $login){?>
+    <h3> Спасибо за регистрацию: <?php echo $login ?></h3>
+<?php } ?>
+
+<?php if(isset($error) && $error) {?>
+    <h3><?php echo $error ?></h3>
+<?php } ?>
+<form action="/login" method="post">
+    <label for="">Логин или email</label>
+    <input type="text" name="login">
+    <label for="">Пароль</label>
+    <input type="text" name="password">
+    <input type="submit" value="LOGIN">
+</body>
+</html>
