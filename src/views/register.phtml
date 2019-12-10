@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Register</title>
+</head>
+<body>
+<?php if(isset($existEmail) && $existEmail){?>
+    <h3>Email already is used</h3>
+<? } ?>
+<?php if(isset($existLogin) && $existLogin){?>
+    <h4>Login already is used</h4>
+<? } ?>
+<form action="/execute/register" method="post">
+    <label for="">Логин</label>
+    <input type="text" name="login">
+    <label for="">Email</label>
+    <input type="text" name="email">
+    <label for="">Пароль</label>
+    <input type="text" name="password">
+    <input type="submit" value="REGISTER">
+</form>
+
+</body>
+</html>

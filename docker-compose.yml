@@ -40,6 +40,8 @@ services:
     domainname: mysql
     hostname: mysql
     image: mysql:5.7
+    networks:
+      - internal
     ports:
       - ${MYSQL_PORT}:3306
     volumes:
@@ -51,8 +53,7 @@ services:
       - "MYSQL_USER=${MYSQL_DB_USER}"
       - "MYSQL_PASSWORD=${MYSQL_DB_PASSWORD}"
       - "MYSQL_ROOT_PASSWORD=${MYSQL_DB_ROOT_PASSWORD}"
-    networks:
-      - internal
+
   phpmyadmin:
     container_name: pma
     domainname: pma
