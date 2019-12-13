@@ -9,5 +9,11 @@
     "require": {},
     "require-dev": {
         "symfony/var-dumper": "^5.0"
+    },
+    "autoload": {
+        "classmap": [
+            "Application/Core"
+        ]
     }
 }
+

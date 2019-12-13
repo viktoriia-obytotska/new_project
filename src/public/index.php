@@ -1,27 +1,9 @@
 <?php
 
-$uri = explode('?', $_SERVER['REQUEST_URI'])[0];
+require __DIR__.'/../vendor/autoload.php';
 
-session_start();
+use Application\Core\Router;
 
-function example(string $login, int $age)
-{
 
-}
-
-switch ($uri) {
-    case '/login':
-    {
-        echo 'login<br>';
-    }
-    case '/main':
-    {
-        echo 'main<br>';
-        break;
-    }
-    default:
-    {
-        echo 'ROUTE NOT FOUND<br>';
-        break;
-    }
-}
+$router = new Router();
+$router->run();

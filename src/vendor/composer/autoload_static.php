@@ -30,11 +30,16 @@ class ComposerStaticInit8ec04bbcd4eafc21a2ddec692503d5ec
         ),
     );
 
+    public static $classMap = array (
+        'Application\\Core\\Router' => __DIR__ . '/../..' . '/Application/Core/Router.php',
+    );
+
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
             $loader->prefixLengthsPsr4 = ComposerStaticInit8ec04bbcd4eafc21a2ddec692503d5ec::$prefixLengthsPsr4;
             $loader->prefixDirsPsr4 = ComposerStaticInit8ec04bbcd4eafc21a2ddec692503d5ec::$prefixDirsPsr4;
+            $loader->classMap = ComposerStaticInit8ec04bbcd4eafc21a2ddec692503d5ec::$classMap;
 
         }, null, ClassLoader::class);
     }
